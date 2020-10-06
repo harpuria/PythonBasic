@@ -52,3 +52,31 @@ def calcstep(begin, end, step = 1):
 
 print(calcstep(1, 10, 2))
 print(calcstep(2, 10)) # 이 경우에는 step 이 기본값인 1이 된다
+
+# 키워드 인수
+# 함수를 호출할 때 인수의 이름을 직접 지정해서 값을 전달하는 방법
+print(calcstep(begin=1, end=10, step=2))
+
+# 키워드 가변 인수
+# 키워드 인수를 가변인수처럼 전달하고자 할때 사용
+def calcstep2(**args):
+    begin = args['begin']
+    end = args['end']
+    step = args['step']
+
+    sum = 0
+    for num in range(begin, end + 1, step):
+        sum += num
+    return sum
+
+print(calcstep2(begin=3, end=5, step=1))
+
+# docstring
+# 함수의 설명을 작성할 수 있다.
+# 함수 아래에 외따옴표 or 쌍따옴표 세개를 넣고 그 안에 설명을 작성하면 된다
+def print_hell_python():
+    '''이것은 "안녕 지옥의 파이썬" 을 출력해주는 함수이다 '''
+    print("안녕 지옥의 파이썬")
+
+# help 함수로 함수의 설명을 출력할 수 있다.
+help(print_hell_python)
