@@ -61,3 +61,17 @@ f.close()
 with open("live.txt", "rt") as f:
     text = f.read()
 print(text)
+
+# 파일관리
+# os 모듈과 shutil 모듈에 정의되어 있다.
+# 복사(copy), 삭제(remove, rmtree), 이름 변경(rename) 등등의 관리를 수행할 수 있다. 양이 많기때문에 몇가지 예시만 작성해봄.
+import shutil
+shutil.copy("live.txt", "live2.txt") # live.txt 를 복사하여 live2.txt 생성
+
+import os
+os.rename("live2.txt", "live22222.txt") # livt2.txt 의 이름을 live22222.txt 로 변경
+
+# listdir() - 파일 목록을 리스트로 생성한다
+files = os.listdir("c:\\")
+for f in files:
+    print(f)
