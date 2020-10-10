@@ -75,3 +75,4 @@ os.rename("live2.txt", "live22222.txt") # livt2.txt 의 이름을 live22222.txt 
 files = os.listdir("c:\\")
 for f in files:
     print(f)
+
